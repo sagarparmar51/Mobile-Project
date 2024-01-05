@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> Confirm box </title>
+<script language="javascript">
+function check()
+{
+   var x = document.frm1.txtA.value;
+   var y;
+   
+      y = confirm("Name is :"+x);
+	  if(y==true)
+	{		
+	    document.write("YOU HAVE CLICKED OK BUTTON");
+    }
+	else{
+	    document.write("YOU HAVE CLICKED ON CANCLE BUTTON");
+		}
+}
+</script>
+</head>
+<body>
+    <center>
+	<h1> Demo of Confirm box </h1>
+	<form name="frm1">
+	Confirm your name:<input type="name" name="txtA">
+	<br><input type="button" value="confirm" onclick="check()">
+    </form>
+	</center>
+</body>
+</html>
+		
+		

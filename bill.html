@@ -1,0 +1,138 @@
+
+<html>
+<head>
+    <title> Project Of Mobile Shop </title>
+	<script>
+	function docalc()
+	{
+	var p = parseInt(document.frm1.price.value);
+	var sgstp = parseInt(document.frm1.sgstp.value);
+	var cgstp = parseInt(document.frm1.cgstp.value);
+        //alert("price"+p);
+		cgst=p*cgstp/100;
+		sgst=p*sgstp/100;
+		nett = p +cgst+sgst;
+		document.frm1.cgst.value=cgst;
+		document.frm1.sgst.value=sgst;
+		document.frm1.amount.value=nett;			
+	}
+	function myalert()
+	{
+		alert("Order Successfull");
+	}
+	</script>
+</head>
+<body bgcolor="bbbbbb">
+<form name="frm1">
+<table border="5" align="center" bgcolor="pink" width="60%">
+<tr>
+	<td width="150px"><img src="samsung1.jpg" width="150px" height="150px"></td>
+	<th colspan = "2" bgcolor="cc9966">
+		<i><u><h1> MISHVA </h1><h2> MOBILE </h2><h3> SHOP </h3>
+	</th>
+	<td width="150px"><img src="iphone11.jpg" width="175px" height="150px"></td>
+</tr>
+<tr>
+    <td colspan="4" align="center" bgcolor="#33ffff"><h2><u>Bill Details</h2></td>
+</tr>
+<tr>
+	<td colspan="3" align="right">Date :</td>
+	<td align="left" colspan="4"><input type="date" name="dt" style="width:100%"></td>  
+</tr>
+<tr>
+	<td>Customer Name</td>
+	<td align="left" colspan="3"><input type="text"></td>  
+</tr> 
+<tr>
+	<td>Contact No.</td>
+	<td align="left" colspan="3"><input type="text"></td>  
+</tr>
+<tr>
+	<td>Email</td>
+	<td align="left" colspan="3"><input type="text"></td>  
+</tr>
+<tr>
+	<td>Address</td>
+	<td align="left" colspan="3"><input type="text"></td>  
+</tr>
+<tr>
+	<td>GST Number</td>
+	<td align="left" colspan="3"><input type="text"></td>  
+</tr>
+<tr>
+	<td>Mobile Name</td>
+	<td align="left" colspan="3"><input type="text"></td>  
+</tr>
+<tr>
+	<td>Mobile Colour</td>
+	<td align="left" colspan="3"><input type="text"></td>  
+</tr>
+<tr>
+	<td>Price</td>
+	<td align="left" colspan="3"><input type="text" name="price" onblur="docalc()"></td>  
+</tr>
+-<tr>
+<th colspan="4"><br>
+</tr>
+<tr>
+    <td colspan="1"><b>Payment Type:</td>
+	<td colspan="3"><select>
+		<option selected>EMI</option>
+        <option selected>UPI</option>
+		<option selected>Credit Card</option>
+		<option selected>Cash</option>
+</select>
+</th>
+<tr>
+    <td colspan="3" align="right">CGST:
+	<select name="cgstp" onchange="docalc()">
+	<option select>5</option>
+	<option select>9</option>
+	<option select>18</option>
+	<option select>28</option>
+	</select>%
+	</td>
+	<td align="left" colspan="4"><input type="text" name="cgst"></td>
+</tr>
+<tr>
+    <td colspan="3" align="right">SGST:
+	<select name="sgstp" onchange="docalc()">
+	<option select>5</option>
+	<option select>9</option>
+	<option select>18</option>
+	<option select>28</option>
+	</select>%
+	
+	</td>
+	<td align="left" colspan="4"><input type="text" name="sgst"></td>
+</tr>
+<tr>
+	<td colspan="3" align="right">Total Amount =</td>
+	<td align="left" colspan="4"><input type="text" name="amount"></td>  
+</tr>
+<tr>
+	    <th colspan="4">
+	    <input type="button" value="Submit" onclick="myalert()">
+        <a href="index.html"><input type="button" value="Back"></th>		  
+</tr>
+<tr>
+<th colspan="4"><br>
+</tr>
+<tr>
+    <td colspan="4" align="center" bgcolor="#33ffff"><h2><u><i>Thanks's For Visit.</h2></td>
+</tr>
+<tr>
+    <th colspan="4" bgcolor="#cc99cc"> Address:- Bus-Station Road, Nr. Shubh Hospital, Gondal.
+	<br>Con.Num:- +91 74051 74349 
+	</th>
+</tr>
+</table>
+
+</form>
+</body>
+</html>
+
+
+
+
+  
